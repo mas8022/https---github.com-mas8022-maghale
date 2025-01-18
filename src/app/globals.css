@@ -1,0 +1,279 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: yekBold;
+    src: local(yekBold), url(../../public/fonts/BYekan/BYekan+\ Bold.ttf);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: yekRegular;
+    src: local(yekRegular), url(../../public/fonts/BYekan/BYekan+.ttf);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: yekThin;
+    src: local(yekRegular), url(../../public/fonts/BYekan/BYekan+.ttf);
+    font-display: swap;
+  }
+
+  * {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    transition: all ease-in 0.1s;
+  }
+  html {
+    direction: rtl;
+    font-size: 10px;
+    scroll-behavior: smooth;
+    font-family: yekBold;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  body {
+    width: 100%;
+  }
+  .ltr {
+    direction: ltr;
+  }
+  .shadOne {
+    box-shadow: -1px 0px 3px -2px #000;
+  }
+  .mui-selector > * {
+    font-size: 1.3rem;
+    @apply !font-light;
+  }
+  option {
+    @apply font-light;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* ck editor css start */
+
+  .root
+    .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline {
+    @apply text-black p-10;
+  }
+  .root .contentProduct {
+    @apply text-black p-2;
+  }
+  .root
+    .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline
+    h2 {
+    @apply text-[3rem] text-blue-600;
+  }
+  .root .contentProduct h2 {
+    @apply text-[3rem] text-blue-600;
+  }
+  .root
+    .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline
+    h3 {
+    @apply text-[2.6rem] text-blue-500;
+  }
+  .root .contentProduct h3 {
+    @apply text-[2.6rem] text-blue-500;
+  }
+  .root
+    .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline
+    h4 {
+    @apply text-[2rem] text-blue-500;
+  }
+  .root .contentProduct h4 {
+    @apply text-[2rem] text-blue-500;
+  }
+  .root
+    .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline
+    p {
+    @apply text-[1.7rem] font-light;
+  }
+  .root .contentProduct p {
+    @apply xm:text-[1.7rem] text-[1.5rem] font-light text-justify;
+  }
+  .root
+    .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline
+    a {
+    @apply text-blue-600 cursor-pointer;
+  }
+  .root .contentProduct a {
+    @apply text-blue-600 cursor-pointer;
+  }
+  .root
+    .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline
+    ol
+    li {
+    @apply mr-6;
+  }
+  .root .contentProduct ol li {
+    @apply mr-6;
+  }
+  .root
+    .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline
+    ol
+    li::marker {
+    @apply text-[1.4rem] font-light text-black/60 mr-8;
+  }
+  .root .contentProduct ol li::marker {
+    @apply text-[1.4rem] font-light text-black/60 mr-8;
+  }
+  .root
+    .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline
+    ol
+    li
+    span {
+    @apply text-[1.4rem] font-light text-black/60;
+  }
+  .root .contentProduct ol li span {
+    @apply text-[1.4rem] font-light text-black/60;
+  }
+  /* //////////////////// */
+
+  .dark .ck.ck-toolbar.ck-toolbar_grouping {
+    background: #f97316;
+  }
+  .dark
+    .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline {
+    @apply text-first bg-[#1e293b] p-10;
+  }
+
+  .dark
+    .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline
+    h2 {
+    @apply text-[3rem] text-blue-600;
+  }
+  .dark .contentProduct h2 {
+    @apply text-[3rem] text-blue-600;
+  }
+  .dark
+    .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline
+    h3 {
+    @apply text-[2.6rem] text-blue-500;
+  }
+  .dark .contentProduct h3 {
+    @apply text-[2.6rem] text-blue-500;
+  }
+  .dark
+    .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline
+    h4 {
+    @apply text-[2rem] text-blue-500;
+  }
+  .dark .contentProduct h4 {
+    @apply text-[2rem] text-blue-500;
+  }
+  .dark
+    .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline
+    p {
+    @apply text-[1.7rem] font-light text-first;
+  }
+  .dark .contentProduct p {
+    @apply xm:text-[1.7rem] text-[1.5rem] font-light text-first text-justify;
+  }
+  .dark
+    .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline
+    a {
+    @apply text-blue-600 cursor-pointer;
+  }
+  .dark .contentProduct a {
+    @apply text-blue-600 cursor-pointer;
+  }
+  .dark
+    .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline
+    ol
+    li {
+    @apply mr-6;
+  }
+  .dark .contentProduct ol li {
+    @apply mr-6;
+  }
+  .dark
+    .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline
+    ol
+    li::marker {
+    @apply text-[1.4rem] font-light text-first/60 mr-8;
+  }
+  .dark .contentProduct ol li::marker {
+    @apply text-[1.4rem] font-light text-first/60 mr-8;
+  }
+  .dark
+    .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline
+    ol
+    li
+    span {
+    @apply text-[1.4rem] font-light text-first;
+  }
+  .dark .contentProduct ol li span {
+    @apply text-[1.4rem] font-light text-first;
+  }
+
+  /* ck editor css end */
+
+  /* scroll-webkit css start */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: linear-gradient(30deg, #ff9831, #ff5900);
+    border-radius: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: #0000001b;
+    margin-top: 10px;
+    border-radius: 20px;
+  }
+  .dark .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: #00000044;
+  }
+
+  /* scroll-webkit css end */
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #374151;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #fff;
+  }
+
+  .dark input:-webkit-autofill,
+  .dark input:-webkit-autofill:hover,
+  .dark input:-webkit-autofill:focus,
+  .dark input:-webkit-autofill:active {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #1e293b;
+  }
+  .select-appearance-none {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+  }
+
+  @media only screen and (max-width: 500px) {
+    * {
+      cursor: default;
+    }
+  }
+}
+
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.swal-text {
+  text-align: center !important;
+}
